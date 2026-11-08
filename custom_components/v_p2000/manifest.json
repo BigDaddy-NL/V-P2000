@@ -1,11 +1,13 @@
 {
   "domain": "v_p2000",
   "name": "V-P2000",
-  "codeowners": [],
+  "codeowners": ["@BigDaddy-NL"],
   "config_flow": true,
   "dependencies": [],
+  "documentation": "https://github.com/BigDaddy-NL/V-P2000",
   "integration_type": "service",
   "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/BigDaddy-NL/V-P2000/issues",
   "requirements": [],
   "single_config_entry": true,
   "version": "1.0.0"
