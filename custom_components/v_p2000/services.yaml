@@ -2,11 +2,11 @@ test_alarm:
   fields:
     melding:
       required: true
-      example: "P 1 BZB-01 Test melding Dorpsstraat 207332"
+      example: "P 1 BZB-01 Test melding Dorpsstraat 201234"
       selector:
         text:
     groep:
       required: false
-      example: s_gravenmoer
+      example: kazerne_dorp
       selector:
         text:

@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Set up V-P2000",
-        "description": "One group per line, as `name: capcode, capcode`. For example:\n\n`Station A: 1200268, 1201507`\n`Team B: 1201600`\n\nV-P2000 fires the event `v_p2000_alarm` for every new page on one of these capcodes. The data comes from AlarmeringDroid, a free service: keep the interval at 10 seconds or more unless every second counts.",
+        "description": "One group per line, as `name: capcode, capcode`. For example:\n\n`Station A: 1234567, 1234568`\n`Dive team: 1234570`\n\nV-P2000 fires the event `v_p2000_alarm` for every new page on one of these capcodes. The data comes from AlarmeringDroid, a free service: keep the interval at 10 seconds or more unless every second counts.",
         "data": {
           "groepen_tekst": "Groups and capcodes",
           "scan_interval": "Interval"

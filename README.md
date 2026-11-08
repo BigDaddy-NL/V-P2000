@@ -27,8 +27,8 @@ Herstart daarna Home Assistant.
 Vul één groep per regel in, als `naam: capcode, capcode`:
 
 ```
-'s Gravenmoer: 1200268, 1201507, 1201940
-TDV: 1201600, 1201224
+Kazerne Dorp: 1234567, 1234568, 1234569
+Duikteam: 1234570
 ```
 
 Groepen en interval pas je later aan via **Configureren**.
@@ -49,9 +49,9 @@ Groepen en interval pas je later aan via **Configureren**.
 
 | Veld | Voorbeeld |
 |---|---|
-| `groep` / `groep_naam` | `s_gravenmoer` / `'s Gravenmoer` |
+| `groep` / `groep_naam` | `kazerne_dorp` / `Kazerne Dorp` |
 | `groepen` | alle groepen die in deze oproep zitten |
-| `melding` | `P 1 BZB-01 BR container Luiten Ambachtstraat Raamsdonk 207332` |
+| `melding` | `P 1 BZB-01 BR woning Dorpsstraat Dorp 201234` |
 | `tekstmelding` | leesbare tekst van AlarmeringDroid, als die er is |
 | `capcodes` | jouw capcodes in deze oproep |
 | `plaats`, `straat`, `dienst`, `regio`, `datum`, `tijd`, `prio1` | |

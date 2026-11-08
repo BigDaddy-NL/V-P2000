@@ -24,13 +24,13 @@ class GroepenError(ValueError):
 
 
 def slugify(text: str) -> str:
-    """'s Gravenmoer -> s_gravenmoer (same result as HA's slugify for plain names)."""
+    """'t Zand Noord -> t_zand_noord (same result as HA's slugify for plain names)."""
     t = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+", "_", t).strip("_")
 
 
 def norm_capcode(code: Any) -> str:
-    """Capcode for comparison: digits without leading zeros (001200268 == 1200268)."""
+    """Capcode for comparison: digits without leading zeros (001234567 == 1234567)."""
     s = str(code).strip().lstrip("0")
     return s or "0"
 

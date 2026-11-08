@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "V-P2000 instellen",
-        "description": "Eén groep per regel, in de vorm `naam: capcode, capcode`. Bijvoorbeeld:\n\n`'s Gravenmoer: 1200268, 1201507`\n`TDV: 1201600`\n\nBij elke nieuwe oproep op een van deze capcodes vuurt V-P2000 het event `v_p2000_alarm` af. De meldingen komen van AlarmeringDroid, een gratis dienst: houd het interval op 10 seconden of meer, tenzij elke seconde telt.",
+        "description": "Eén groep per regel, in de vorm `naam: capcode, capcode`. Bijvoorbeeld:\n\n`Kazerne Dorp: 1234567, 1234568`\n`Duikteam: 1234570`\n\nBij elke nieuwe oproep op een van deze capcodes vuurt V-P2000 het event `v_p2000_alarm` af. De meldingen komen van AlarmeringDroid, een gratis dienst: houd het interval op 10 seconden of meer, tenzij elke seconde telt.",
         "data": {
           "groepen_tekst": "Groepen en capcodes",
           "scan_interval": "Interval"
@@ -62,7 +62,7 @@
         },
         "groep": {
           "name": "Groep",
-          "description": "Groep (bijv. s_gravenmoer). Leeg = de eerste groep."
+          "description": "Groep (bijv. kazerne_dorp). Leeg = de eerste groep."
         }
       }
     }
