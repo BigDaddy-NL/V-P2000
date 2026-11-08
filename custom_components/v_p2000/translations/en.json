@@ -1,0 +1,70 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up V-P2000",
+        "description": "One group per line, as `name: capcode, capcode`. For example:\n\n`Station A: 1200268, 1201507`\n`Team B: 1201600`\n\nV-P2000 fires the event `v_p2000_alarm` for every new page on one of these capcodes. The data comes from AlarmeringDroid, a free service: keep the interval at 10 seconds or more unless every second counts.",
+        "data": {
+          "groepen_tekst": "Groups and capcodes",
+          "scan_interval": "Interval"
+        }
+      }
+    },
+    "error": {
+      "ongeldige_regel": "Line not understood: {detail}. Use `name: capcode, capcode`.",
+      "geen_capcodes": "Group {detail} has no capcodes.",
+      "ongeldige_capcode": "Invalid capcode: {detail}. A capcode has 6 to 9 digits.",
+      "dubbele_naam": "Group name {detail} is used twice.",
+      "geen_groepen": "Enter at least one group.",
+      "geen_verbinding": "AlarmeringDroid is not reachable right now. Please try again later."
+    },
+    "abort": {
+      "single_instance_allowed": "V-P2000 is already set up. Change the groups via Configure.",
+      "already_configured": "V-P2000 is already set up.",
+      "ongeldige_yaml": "The v_p2000 YAML configuration is invalid."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "V-P2000",
+        "description": "One group per line, as `name: capcode, capcode`.",
+        "data": {
+          "groepen_tekst": "Groups and capcodes",
+          "scan_interval": "Interval"
+        }
+      }
+    },
+    "error": {
+      "ongeldige_regel": "Line not understood: {detail}. Use `name: capcode, capcode`.",
+      "geen_capcodes": "Group {detail} has no capcodes.",
+      "ongeldige_capcode": "Invalid capcode: {detail}. A capcode has 6 to 9 digits.",
+      "dubbele_naam": "Group name {detail} is used twice.",
+      "geen_groepen": "Enter at least one group.",
+      "geen_verbinding": "AlarmeringDroid is not reachable right now. Please try again later."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "verbinding": {
+        "name": "Connection"
+      }
+    }
+  },
+  "services": {
+    "test_alarm": {
+      "name": "Test alarm",
+      "description": "Fires a test v_p2000_alarm event to test your automations.",
+      "fields": {
+        "melding": {
+          "name": "Message",
+          "description": "Text of the test message."
+        },
+        "groep": {
+          "name": "Group",
+          "description": "Group slug (e.g. station_a). Empty = the first group."
+        }
+      }
+    }
+  }
+}

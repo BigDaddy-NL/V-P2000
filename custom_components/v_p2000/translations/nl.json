@@ -1,0 +1,70 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "V-P2000 instellen",
+        "description": "Eén groep per regel, in de vorm `naam: capcode, capcode`. Bijvoorbeeld:\n\n`'s Gravenmoer: 1200268, 1201507`\n`TDV: 1201600`\n\nBij elke nieuwe oproep op een van deze capcodes vuurt V-P2000 het event `v_p2000_alarm` af. De meldingen komen van AlarmeringDroid, een gratis dienst: houd het interval op 10 seconden of meer, tenzij elke seconde telt.",
+        "data": {
+          "groepen_tekst": "Groepen en capcodes",
+          "scan_interval": "Interval"
+        }
+      }
+    },
+    "error": {
+      "ongeldige_regel": "Regel niet begrepen: {detail}. Gebruik `naam: capcode, capcode`.",
+      "geen_capcodes": "Groep {detail} heeft geen capcodes.",
+      "ongeldige_capcode": "Ongeldige capcode: {detail}. Een capcode bestaat uit 6 tot 9 cijfers.",
+      "dubbele_naam": "De groepsnaam {detail} komt twee keer voor.",
+      "geen_groepen": "Vul minstens één groep in.",
+      "geen_verbinding": "AlarmeringDroid is nu niet bereikbaar. Probeer het later opnieuw."
+    },
+    "abort": {
+      "single_instance_allowed": "V-P2000 is al ingesteld. Pas de groepen aan via Configureren.",
+      "already_configured": "V-P2000 is al ingesteld.",
+      "ongeldige_yaml": "De v_p2000-configuratie in YAML is ongeldig."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "V-P2000",
+        "description": "Eén groep per regel, in de vorm `naam: capcode, capcode`.",
+        "data": {
+          "groepen_tekst": "Groepen en capcodes",
+          "scan_interval": "Interval"
+        }
+      }
+    },
+    "error": {
+      "ongeldige_regel": "Regel niet begrepen: {detail}. Gebruik `naam: capcode, capcode`.",
+      "geen_capcodes": "Groep {detail} heeft geen capcodes.",
+      "ongeldige_capcode": "Ongeldige capcode: {detail}. Een capcode bestaat uit 6 tot 9 cijfers.",
+      "dubbele_naam": "De groepsnaam {detail} komt twee keer voor.",
+      "geen_groepen": "Vul minstens één groep in.",
+      "geen_verbinding": "AlarmeringDroid is nu niet bereikbaar. Probeer het later opnieuw."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "verbinding": {
+        "name": "Verbinding"
+      }
+    }
+  },
+  "services": {
+    "test_alarm": {
+      "name": "Testalarm",
+      "description": "Vuurt een test-event v_p2000_alarm af, om je automations te testen.",
+      "fields": {
+        "melding": {
+          "name": "Melding",
+          "description": "Tekst van de testmelding."
+        },
+        "groep": {
+          "name": "Groep",
+          "description": "Groep (bijv. s_gravenmoer). Leeg = de eerste groep."
+        }
+      }
+    }
+  }
+}
